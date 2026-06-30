@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Renova — La esencia del campo chihuahuense</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<nav id="nav">
+  <a href="#inicio" class="nav-logo">Renova</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#inicio" class="active">Inicio</a></li>
+    <li><a href="#acerca">Acerca de</a></li>
+    <li><a href="#tienda">Tienda</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="nav-cart" onclick="openCheckout()">🛍️<span class="cart-count" id="cartCount">0</span></div>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<section id="inicio">
+  <div class="hero-bg-img" id="heroBg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-card">
+    <h1 class="hero-brand">Renova</h1>
+    <p class="hero-tagline">La esencia del campo chihuahuense</p>
+    <div class="hero-divider"></div>
+    <a href="#tienda" class="hero-cta">Compra ahora &rsaquo;</a>
+  </div>
+</section>
+
+<div class="banner-strip">
+  🌿 Contamos con envíos a toda la República Mexicana. Logística personalizada sujeta a volumen y destino.
+</div>
+
+<section class="features">
+  <p class="section-label">Por qué elegirnos</p>
+  <h2 class="section-title">Puro y natural<br>en tu vida diaria</h2>
+  <div class="section-divider"></div>
+  <div class="features-grid">
+    <div class="feature-card">
+      <div class="feature-icon">🌱</div>
+      <div class="feature-title">Cultivado sin agroquímicos</div>
+      <p class="feature-desc">Sin pesticidas, sin fertilizantes artificiales. Producido en tierras vírgenes de Chihuahua con métodos tradicionales.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🏔️</div>
+      <div class="feature-title">Orégano Premium</div>
+      <p class="feature-desc">El corazón de Chihuahua produce el orégano más aromático y potente del país.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🔬</div>
+      <div class="feature-title">Alta Concentración</div>
+      <p class="feature-desc">Máxima concentración de carvacrol y timol. Calidad garantizada en cada lote.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🚚</div>
+      <div class="feature-title">Envío Nacional</div>
+      <p class="feature-desc">Enviamos a toda la República Mexicana. Logística personalizada a tu medida.</p>
+    </div>
+  </div>
+</section>
+
+<section id="acerca">
+  <div class="about-grid">
+    <div class="about-text">
+      <p class="section-label">Acerca de Renova</p>
+      <h2 class="section-title">Cultivado con amor en Rancho Tres Piedras</h2>
+      <div class="section-divider"></div>
+      <p>En Rancho Tres Piedras, ubicado en Jiménez, Chihuahua, llevamos el orgullo del campo en la sangre. Nos dedicamos a cultivar orégano de la más alta calidad, siguiendo una filosofía transmitida de generación en generación: <em>¡Tres Piedras!</em></p>
+      <p>Cuidamos cada planta con dedicación, asegurando que nuestro orégano sea 100% natural y libre de pesticidas o fertilizantes artificiales. Nuestro proceso incluye riego inteligente y secado protegido, resultando en un producto limpio y puro en su estado más auténtico.</p>
+      <p>Nuestro orégano no solo es un ingrediente excepcional para la industria alimentaria, sino que también tiene propiedades benéficas en el sector farmacéutico y cosmético. Al elegir Renova, apoyas prácticas agrícolas responsables que cuidan el suelo y el medio ambiente.</p>
+    </div>
+    <div class="about-image-wrap">
+      <img id="aboutImg" class="about-img" src="" alt="Rancho Tres Piedras"/>
+      <div class="about-badge"><strong>100%</strong>Puro y<br>Natural</div>
+    </div>
+  </div>
+  <div class="section-divider" style="margin-top:3rem"></div>
+  <p class="section-label" style="margin-top:1rem">Nuestro rancho</p>
+  <div class="gallery-strip" id="galleryStrip"></div>
+</section>
+
+<section id="tienda">
+  <p class="section-label">Nuestros productos</p>
+  <h2 class="section-title">La tienda Renova</h2>
+  <div class="section-divider"></div>
+  <div class="products-grid" id="productsGrid"></div>
+</section>
+
+<section id="contacto">
+  <div class="contact-grid">
+    <div class="contact-info">
+      <p class="section-label">Contáctanos</p>
+      <h2 class="section-title">Estamos aquí para ayudarte</h2>
+      <div class="section-divider"></div>
+      <p>Estamos aquí para ayudarte con cualquier duda, cotización o consulta sobre nuestros productos.</p>
+      <div class="contact-detail"><span>✉️</span> trespiedrasjmz@gmail.com</div>
+      <div class="contact-detail"><span>📞</span> 614-156-3558</div>
+      <div class="contact-detail"><span>📍</span> Tres Piedras de Jiménez, Chihuahua</div>
+    </div>
+    <div class="contact-form">
+      <div class="form-row">
+        <div class="form-group"><label>Nombre *</label><input id="c_nombre" type="text" placeholder="Tu nombre"/></div>
+        <div class="form-group"><label>Apellido *</label><input id="c_apellido" type="text" placeholder="Tu apellido"/></div>
+      </div>
+      <div class="form-group"><label>Email *</label><input id="c_email" type="email" placeholder="tu@correo.com"/></div>
+      <div class="form-group"><label>Teléfono</label><input id="c_tel" type="tel" placeholder="+52 614 000 0000"/></div>
+      <div class="form-group"><label>Estado</label>
+        <select id="c_estado">
+          <option value="">-- Selecciona tu estado --</option>
+          <option>Aguascalientes</option><option>Baja California</option><option>Baja California Sur</option>
+          <option>Campeche</option><option>Chiapas</option><option>Chihuahua</option>
+          <option>Ciudad de México</option><option>Coahuila</option><option>Colima</option>
+          <option>Durango</option><option>Guanajuato</option><option>Guerrero</option>
+          <option>Hidalgo</option><option>Jalisco</option><option>México</option>
+          <option>Michoacán</option><option>Morelos</option><option>Nayarit</option>
+          <option>Nuevo León</option><option>Oaxaca</option><option>Puebla</option>
+          <option>Querétaro</option><option>Quintana Roo</option><option>San Luis Potosí</option>
+          <option>Sinaloa</option><option>Sonora</option><option>Tabasco</option>
+          <option>Tamaulipas</option><option>Tlaxcala</option><option>Veracruz</option>
+          <option>Yucatán</option><option>Zacatecas</option>
+        </select>
+      </div>
+      <div class="form-group"><label>Mensaje *</label><textarea id="c_mensaje" placeholder="Escribe tu mensaje aquí..."></textarea></div>
+      <button class="btn-send" onclick="sendContactForm()">Enviar mensaje</button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand">Renova</div>
+      <p class="footer-tagline">"¡Tres Piedras!" Hoy, esa es nuestra filosofía y nuestra garantía de calidad. Cuidamos cada planta con dedicación para llevar a tu industria el mejor orégano de la región.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navegación</h4>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#acerca">Acerca de</a></li>
+        <li><a href="#tienda">Tienda</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Síguenos</h4>
+      <div class="social-links">
+        <a href="#" title="Twitter">𝕏</a>
+        <a href="#" title="Facebook">f</a>
+        <a href="#" title="Pinterest">𝒫</a>
+      </div>
+    </div>
+    <div class="footer-newsletter">
+      <h4>Únete a nuestra lista de correo</h4>
+      <div class="newsletter-form">
+        <input class="newsletter-input" id="newsletterEmail" type="email" placeholder="Ingresa tu email"/>
+        <button class="newsletter-btn" onclick="subscribeEmail()">Suscribirse</button>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Renova — Rancho Tres Piedras, Jiménez, Chihuahua</span>
+    <a href="#" style="color:rgba(255,255,255,.65);text-decoration:none">Política de Privacidad</a>
+  </div>
+</footer>
+
+<!-- MODAL DE PRODUCTO -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <button class="modal-close" onclick="closeProductModal()">✕</button>
+    <div class="modal-img-wrap"><img id="modalImg" src="" alt=""/></div>
+    <div class="modal-body">
+      <h2 class="modal-name" id="modalName"></h2>
+      <div class="modal-price" id="modalPrice"></div>
+      <p class="modal-desc" id="modalDesc"></p>
+      <div id="modalOptions"></div>
+      <div class="modal-label">Cantidad</div>
+      <div class="qty-row">
+        <button class="qty-btn" onclick="changeQty(-1)">−</button>
+        <span class="qty-num" id="qtyNum">1</span>
+        <button class="qty-btn" onclick="changeQty(1)">+</button>
+      </div>
+      <button class="btn-cart-full" onclick="addToCartFromModal()">Agregar al carrito</button>
+      <button class="btn-buy-full" onclick="addToCartFromModal(true)">Realizar compra</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL DE CHECKOUT -->
+<div class="checkout-overlay" id="checkoutOverlay">
+  <div class="checkout-modal">
+    <div class="checkout-header">
+      <h2>Tu pedido</h2>
+      <button class="checkout-close" onclick="closeCheckout()">✕</button>
+    </div>
+    <div class="checkout-body" id="checkoutBody"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
